@@ -1,10 +1,10 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Blog = () => {
   const blogPosts = [
     {
+      id: '1',
       title: 'The Future of Digital Marketing: Trends to Watch in 2024',
       excerpt: 'Discover the emerging trends that will shape digital marketing strategies in the coming year.',
       date: 'December 15, 2023',
@@ -14,6 +14,7 @@ const Blog = () => {
       featured: true
     },
     {
+      id: '2',
       title: 'How AI is Revolutionizing Content Marketing',
       excerpt: 'Learn how artificial intelligence is transforming the way brands create and distribute content.',
       date: 'December 10, 2023',
@@ -22,6 +23,7 @@ const Blog = () => {
       image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
     },
     {
+      id: '3',
       title: 'SEO Best Practices That Actually Drive Results',
       excerpt: 'A comprehensive guide to SEO strategies that have proven to increase organic traffic and rankings.',
       date: 'December 8, 2023',
@@ -30,6 +32,7 @@ const Blog = () => {
       image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
     },
     {
+      id: '4',
       title: 'Social Commerce: The New Frontier of E-commerce',
       excerpt: 'Explore how social media platforms are becoming powerful sales channels for modern businesses.',
       date: 'December 5, 2023',
@@ -38,6 +41,7 @@ const Blog = () => {
       image: 'https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
     },
     {
+      id: '5',
       title: 'Data-Driven Marketing: Making Decisions That Matter',
       excerpt: 'Understanding how to leverage data analytics for better marketing decisions and improved ROI.',
       date: 'December 1, 2023',
@@ -46,6 +50,7 @@ const Blog = () => {
       image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
     },
     {
+      id: '6',
       title: 'Building Brand Authority Through Thought Leadership',
       excerpt: 'Strategies for establishing your brand as an industry leader through valuable content and insights.',
       date: 'November 28, 2023',
@@ -104,7 +109,7 @@ const Blog = () => {
                   <span>{blogPosts[0].readTime}</span>
                 </div>
                 <Link
-                  to="#"
+                  to={`/blog/${blogPosts[0].id}`}
                   className="btn-gradient w-fit"
                 >
                   Read Article
@@ -168,7 +173,7 @@ const Blog = () => {
                   </p>
                   
                   <Link
-                    to="#"
+                    to={`/blog/${post.id}`}
                     className="text-neon-purple font-medium hover:text-white transition-colors inline-flex items-center"
                   >
                     Read More
@@ -198,7 +203,7 @@ const Blog = () => {
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 rounded-lg bg-white text-dark-bg placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
               />
-              <button className="btn-outline bg-white text-dark-bg hover:bg-gray-100 whitespace-nowrap">
+              <button className="px-6 py-3 bg-white text-dark-bg font-semibold rounded-lg hover:bg-gray-100 transition-colors">
                 Subscribe
               </button>
             </div>
